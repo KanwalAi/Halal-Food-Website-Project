@@ -1,0 +1,6 @@
+{
+  "name": "halal-food",
+  "dependencies": {
+    "express": "^4.22.1"
+  }
+}

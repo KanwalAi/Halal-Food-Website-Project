@@ -1,0 +1,975 @@
+/* ============================================
+   HALAL DELIGHTS - MASTER STYLESHEET
+   All CSS merged into a single file
+   ============================================ */
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fffaf0;
+  color: #2b2b2b;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+/* ============================================
+   HEADER STYLES (Common)
+   ============================================ */
+
+.index-header {
+  background: #800000;
+  padding: 15px 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.index-logo {
+  font-family: 'Playfair Display';
+  font-size: 24px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.index-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.index-nav-link:hover {
+  color: #D4AF37;
+}
+
+.index-logout-btn {
+  background: #D4AF37;
+  color: #800000;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.index-logout-btn:hover {
+  background: #e6c542;
+  color: #800000;
+}
+
+/* About Header */
+.about-header {
+  background: #800000;
+  padding: 15px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.about-logo {
+  font-family: 'Playfair Display';
+  font-size: 26px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.about-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-nav-link.active,
+.about-nav-link:hover {
+  color: #D4AF37;
+}
+
+/* Categories Header */
+.cat-header {
+  background: #800000;
+  padding: 15px 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cat-logo {
+  font-family: 'Playfair Display';
+  font-size: 26px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.cat-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cat-nav-link.active,
+.cat-nav-link:hover {
+  color: #D4AF37;
+}
+
+/* Cart Header */
+.cart-header {
+  background: #800000;
+  padding: 15px 50px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cart-logo {
+  font-family: 'Playfair Display';
+  font-size: 24px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.cart-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.cart-nav-link:hover {
+  opacity: 0.8;
+}
+
+.cart-logout-btn {
+  background: #D4AF37;
+  color: #800000;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.cart-logout-btn:hover {
+  background: #e6c542;
+  color: #800000;
+}
+
+/* Contact Header */
+.contact-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(128, 0, 0, 0.85);
+  padding: 15px 50px;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.contact-logo {
+  font-family: 'Playfair Display';
+  font-size: 26px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.contact-nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.contact-nav-link.active,
+.contact-nav-link:hover {
+  color: #D4AF37;
+}
+
+/* Login Header */
+.login-header {
+  background: #800000;
+  padding: 15px 50px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo {
+  font-family: 'Playfair Display';
+  font-size: 26px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.login-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login-nav-link:hover {
+  color: #D4AF37;
+}
+
+/* Order Header */
+.order-header {
+  background: #800000;
+  padding: 15px 50px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.order-logo {
+  font-family: 'Playfair Display';
+  font-size: 24px;
+  color: #D4AF37;
+  font-weight: bold;
+}
+
+.order-nav-link {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.order-nav-link:hover {
+  color: #D4AF37;
+}
+
+.order-logout-btn {
+  background: #D4AF37;
+  color: #800000;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.order-logout-btn:hover {
+  background: #e6c542;
+  color: #800000;
+}
+
+/* Legacy Header Classes */
+.main-header {
+  background: #800000;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-family: 'Playfair Display';
+  font-size: 24px;
+  color: #D4AF37;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* ============================================
+   INDEX/HOME PAGE STYLES
+   ============================================ */
+
+.index-hero {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.index-hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.index-hero h1 span {
+  color: #D4AF37;
+}
+
+.index-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.index-btn {
+  background: #800000;
+  color: white;
+  border: 1px solid #D4AF37;
+  padding: 14px 36px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.index-btn:hover {
+  background: #D4AF37;
+  color: #800000;
+}
+
+/* ============================================
+   MENU PAGE STYLES
+   ============================================ */
+
+.menu-title {
+  text-align: center;
+  font-family: 'Playfair Display';
+  color: #800000;
+  margin: 40px 0;
+  font-size: 3rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 50px 50px 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-info h3 {
+  margin: 10px 0;
+  color: #2b2b2b;
+}
+
+.price {
+  color: #800000;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #800000;
+  color: white;
+  border: 1px solid #D4AF37;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #D4AF37;
+  color: #800000;
+}
+
+.btn-add {
+  background-color: #800000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-add:hover {
+  background-color: #500000;
+}
+
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.about-section {
+  padding: 80px 50px;
+}
+
+.about-text h1 {
+  font-family: 'Playfair Display';
+  font-size: 3rem;
+  color: #800000;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ============================================
+   CATEGORIES PAGE STYLES
+   ============================================ */
+
+.cat-hero {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 60px 40px;
+  color: white;
+}
+
+.cat-hero h1 {
+  font-family: 'Playfair Display';
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.cat-hero p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: #f5e6c8;
+}
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cat-card {
+  position: relative;
+  height: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: transform 0.4s ease;
+  text-decoration: none;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cat-card:hover img {
+  transform: scale(1.1);
+}
+
+.cat-card:hover {
+  transform: translateY(-10px);
+}
+
+.cat-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.cat-overlay h3 {
+  font-family: 'Playfair Display';
+  font-size: 1.8rem;
+  margin: 0;
+  color: #D4AF37;
+}
+
+.cat-overlay span {
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+/* ============================================
+   CART PAGE STYLES
+   ============================================ */
+
+.cart-title {
+  color: #800000;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.cart-box {
+  width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cart-box-title {
+  color: #800000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cart-item-display {
+  background: #fffaf0;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #800000;
+  text-align: left;
+}
+
+.cart-item-display p {
+  margin-bottom: 8px;
+}
+
+.cart-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.cart-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+
+.cart-textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.cart-confirm-btn {
+  background: #800000;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cart-confirm-btn:hover {
+  background: #600000;
+  color: white;
+}
+
+.table {
+  font-family: 'Poppins', sans-serif;
+}
+
+.table-active {
+  background-color: #f8f9fa;
+}
+
+/* ============================================
+   CONTACT PAGE STYLES
+   ============================================ */
+
+.contact-map {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contact-card {
+  position: absolute;
+  top: 100px;
+  right: 50px;
+  width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.contact-card h1 {
+  font-family: 'Playfair Display';
+  color: #800000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+
+.contact-textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.contact-btn {
+  padding: 12px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-btn:hover {
+  background: #660000;
+  color: white;
+}
+
+/* ============================================
+   LOGIN PAGE STYLES
+   ============================================ */
+
+.login-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: white;
+  width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  border-top: 6px solid #800000;
+}
+
+.login-card h1 {
+  font-family: 'Playfair Display';
+  color: #800000;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.login-card p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.login-input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+
+.login-btn {
+  padding: 12px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.login-btn:hover {
+  background: #660000;
+  color: white;
+}
+
+/* ============================================
+   ORDER PAGE STYLES
+   ============================================ */
+
+.order-title {
+  font-family: 'Playfair Display';
+  margin-top: 40px;
+  color: #800000;
+  font-weight: bold;
+}
+
+.order-box {
+  background: white;
+  width: 350px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.order-input:focus {
+  border-color: #0c3b2e;
+  box-shadow: 0 0 0 0.2rem rgba(12, 59, 46, 0.25);
+}
+
+.order-btn {
+  padding: 12px;
+  background: #0c3b2e;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #0a2a1f;
+  color: white;
+}
+
+/* ============================================
+   SIGNUP PAGE STYLES
+   ============================================ */
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.signup-box {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.signup-box h1 {
+  font-family: 'Playfair Display';
+  color: #800000;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.signup-input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-input:focus {
+  border-color: #800000;
+  box-shadow: 0 0 0 0.2rem rgba(128, 0, 0, 0.25);
+}
+
+.signup-btn {
+  padding: 12px;
+  background: #800000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.signup-btn:hover {
+  background: #600000;
+  color: white;
+}
+
+/* ============================================
+   MY ACCOUNT PAGE STYLES
+   ============================================ */
+
+.header-title {
+  font-family: 'Playfair Display', serif;
+  color: #800000;
+  font-weight: bold;
+}
+
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+}
+
+.bg-pending {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.bg-completed {
+  background-color: #198754;
+  color: #fff;
+}
+
+.bg-cancelled {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* ============================================
+   BACKEND LOGIN STYLES
+   ============================================ */
+
+.backend-login-body {
+  font-family: sans-serif;
+  background-color: #800000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #800000;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-box button:hover {
+  background-color: #c82333;
+}
+
+.login-box .error {
+  color: #dc3545;
+  margin-top: 10px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 991px) {
+  .about-text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .about-text h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-card {
+    width: 90%;
+    left: 50%;
+    top: auto;
+    bottom: 30px;
+    transform: translateX(-50%);
+  }
+
+  .contact-header {
+    padding: 15px 20px;
+  }
+}
