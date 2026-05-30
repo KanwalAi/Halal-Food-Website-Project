@@ -279,14 +279,8 @@ halal-food-website/
 
 ---
 
-## Project Team
-
-**Course:** Database Systems / Web Engineering
-
 **Developers:**
 - Kanwal Fatima
 - Team Members
-
-**Semester:** Fall 2025
 
 ---
