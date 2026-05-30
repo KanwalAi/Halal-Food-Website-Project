@@ -4,6 +4,14 @@ A web-based food ordering platform developed using PHP, MySQL, HTML, CSS, JavaSc
 
 ---
 
+## Demo
+
+### Screenshots & Walkthrough
+
+A complete visual walkthrough of the project, including customer and admin interfaces, is available in the PDF below:
+
+📄 [View Project Screenshots](Halal-Food-Website.pdf)
+
 ## Features
 
 ### Customer Features
