@@ -1,108 +1,292 @@
-======================================================
-         HALAL DELIGHTS - FOOD ORDERING SYSTEM
-======================================================
+# Halal Delights - Food Ordering System
 
-Thank you for reviewing the Halal Delights project. 
-Follow the steps below to set up and run the website on your local machine.
+A web-based food ordering platform developed using PHP, MySQL, HTML, CSS, JavaScript, and Bootstrap. The system allows customers to browse menu items, place orders, manage accounts, and communicate with administrators, while providing an admin panel for managing products, orders, and customer inquiries.
 
-------------------------------------------------------
-1. REQUIREMENTS
-------------------------------------------------------
-To run this project, you need a local server environment.
-* Software: XAMPP
-* PHP Version: 7.4 or higher.
-* Browser: Chrome, Firefox, or Edge.
+---
 
-------------------------------------------------------
-2. INSTALLATION STEPS
-------------------------------------------------------
-Step 1: Install XAMPP
-   - Download XAMPP from https://www.apachefriends.org/index.html
-   - Install it and open the "XAMPP Control Panel".
-   - Click "Start" next to **Apache** and **MySQL**.
+## Features
 
-Step 2: Setup Project Files
-   - Copy the project folder (e.g., "halal-food-website") 
-   - Paste it inside the XAMPP "htdocs" directory.
-     (Default location: C:\xampp\htdocs\)
+### Customer Features
+- User Registration & Login
+- Browse Food Menu
+- Add Items to Cart
+- Place Orders Online
+- Order Tracking
+- Contact & Support System
+- Profile Management
 
-------------------------------------------------------
-3. DATABASE SETUP
-------------------------------------------------------
-Step 1: Open Database Manager
-   - Open your browser and type: http://localhost/phpmyadmin
+### Admin Features
+- Dashboard Overview
+- Manage Food Items
+- Manage Customer Orders
+- Reply to Customer Queries via Email
+- User Management
+- Order Status Updates
 
-Step 2: Create Database
-   - Click "New" on the left sidebar.
-   - Database Name: halal_food_db
-   - Click "Create".
+### Technical Features
+- Responsive Design
+- PHP & MySQL Backend
+- Session-Based Authentication
+- Secure Password Hashing
+- PHPMailer Email Integration
+- Modular Code Structure
 
-Step 3: Import Data
-   - Click on the "halal_food_db" database you just created.
-   - Go to the "Import" tab at the top.
-   - Click "Choose File" and select the "halal_food_db.sql" file included in this project folder.
-   - Click "Import" (or "Go") at the bottom.
+---
 
-------------------------------------------------------
-4. HOW TO RUN
-------------------------------------------------------
-Once the files are in `htdocs` and the database is imported:
+## Requirements
 
+To run this project locally, install:
 
-* run Homepage on Browser:
-  http://localhost/halal-food-website/frontend/index.php
+- XAMPP
+- PHP 7.4 or higher
+- MySQL
+- Chrome, Firefox, or Edge
 
+---
 
-*(Note: If you renamed the project folder, update "halal-food-website" in the URL to match your folder name).*
+## Installation
 
-------------------------------------------------------
-5. DEFAULT CREDENTIALS (TESTING)
-------------------------------------------------------
-Admin Login:
-- Username: admin
-- Password: 123
+### Step 1: Install XAMPP
 
-Customer Login:
-- You can register a new account on the customer login page.
+1. Download XAMPP from:
+   https://www.apachefriends.org/index.html
 
-Note:
-To change admin credentials open backend/reset-admin.php and set credentials according to you and
-run it on Browser:
-  http://localhost/halal-food-website/backend/reset-admin.php
- 
-*(Note: If you renamed the project folder, update "halal-food-website" in the URL to match your folder name).*
+2. Install XAMPP.
 
-To Send mail, for replying as an admin to customer query
+3. Open the XAMPP Control Panel.
 
-1. Enable 2-Step Verification
-Google will not let you create an App Password unless your account is extra secure.
+4. Start:
+   - Apache
+   - MySQL
 
-Go to your Google Account Settings.
+---
 
-On the left menu, click Security.
+### Step 2: Setup Project Files
 
-Under "How you sign in to Google," ensure 2-Step Verification is turned ON.
+Copy the project folder:
 
-2. Generate the 16-Character App Password
-In the search bar at the top of your Google Account page, type "App Passwords".
+```text
+halal-food-website
+```
 
-Select the result that says App Passwords.
+Paste it into:
 
-App Name: Type something like "Fiverr Web Project" or "Halal Delights Website."
+```text
+C:\xampp\htdocs\
+```
 
-Click Create.
+---
 
-A yellow box will appear with a 16-character code (e.g., abcd efgh ijkl mnop).
+## Database Setup
 
-In reply-message.php file, find: (
-        $mail->Username   = 'username@gmail.com';     // <--- REPLACE THIS
-        $mail->Password   = '0000000000000000';      // <--- PASTE YOUR 16-CHAR APP PASSWORD
-        // ************************************************************
+### Step 1: Open phpMyAdmin
 
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+Open:
 
-        // Recipient
-        $mail->setFrom('username@gmail.com', 'Halal Delights Admin'); // Change sender name if you want
-)
-Section and replace mail and app password.
+```text
+http://localhost/phpmyadmin
+```
+
+### Step 2: Create Database
+
+Create a database named:
+
+```sql
+halal_food_db
+```
+
+### Step 3: Import Database
+
+1. Select `halal_food_db`
+2. Open the **Import** tab
+3. Choose:
+
+```text
+halal_food_db.sql
+```
+
+4. Click **Import**
+
+---
+
+## Running the Project
+
+After importing the database and placing the files in `htdocs`, open:
+
+```text
+http://localhost/halal-food-website/frontend/index.php
+```
+
+> If you renamed the project folder, replace `halal-food-website` in the URL with your folder name.
+
+---
+
+## Default Credentials
+
+### Admin Account
+
+```text
+Username: admin
+Password: 123
+```
+
+### Customer Account
+
+Register a new account from the customer registration page.
+
+---
+
+## Reset Admin Credentials
+
+To create new admin credentials:
+
+1. Open:
+
+```text
+backend/reset-admin.php
+```
+
+2. Update the username and password.
+
+3. Run:
+
+```text
+http://localhost/halal-food-website/backend/reset-admin.php
+```
+
+---
+
+## Email Configuration (PHPMailer)
+
+The admin can reply to customer inquiries directly through email.
+
+### Step 1: Enable Two-Factor Authentication
+
+1. Open your Google Account.
+2. Go to:
+
+```text
+Security → 2-Step Verification
+```
+
+3. Enable Two-Step Verification.
+
+---
+
+### Step 2: Generate App Password
+
+1. Search for:
+
+```text
+App Passwords
+```
+
+2. Create a new app password.
+
+3. Copy the generated 16-character password.
+
+Example:
+
+```text
+abcd efgh ijkl mnop
+```
+
+---
+
+### Step 3: Configure PHPMailer
+
+Open:
+
+```text
+reply-message.php
+```
+
+Replace:
+
+```php
+$mail->Username = 'username@gmail.com';
+$mail->Password = '0000000000000000';
+```
+
+With:
+
+```php
+$mail->Username = 'your-email@gmail.com';
+$mail->Password = 'your-app-password';
+```
+
+Also update:
+
+```php
+$mail->setFrom(
+    'your-email@gmail.com',
+    'Halal Delights Admin'
+);
+```
+
+---
+
+## Project Structure
+
+```text
+halal-food-website/
+│
+├── frontend/
+│   ├── index.php
+│   ├── menu.php
+│   ├── cart.php
+│   ├── checkout.php
+│   └── profile.php
+│
+├── backend/
+│   ├── admin-panel/
+│   ├── reset-admin.php
+│   ├── reply-message.php
+│   └── database/
+│
+├── assets/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── halal_food_db.sql
+└── README.md
+```
+
+---
+
+## Technologies Used
+
+- PHP
+- MySQL
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- PHPMailer
+- XAMPP
+
+---
+
+## Future Enhancements
+
+- Online Payment Gateway Integration
+- SMS Notifications
+- Food Delivery Tracking
+- Discount & Coupon System
+- Mobile Application Support
+- Multi-Language Support
+
+---
+
+## Project Team
+
+**Course:** Database Systems / Web Engineering
+
+**Developers:**
+- Kanwal Fatima
+- Team Members
+
+**Semester:** Fall 2025
+
+---
